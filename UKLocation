@@ -1,0 +1,250 @@
+Started by user Mandy
+Building in workspace C:\jenkins\workspace\UKLocation
+ > C:\Program Files\Git\bin\git rev-parse --is-inside-work-tree # timeout=10
+Fetching changes from the remote Git repository
+ > C:\Program Files\Git\bin\git config remote.origin.url https://github.com/Mandylz/ExamTest16-MandanaLotfiZadeh1 # timeout=10
+Fetching upstream changes from https://github.com/Mandylz/ExamTest16-MandanaLotfiZadeh1
+ > C:\Program Files\Git\bin\git --version # timeout=10
+ > C:\Program Files\Git\bin\git fetch --tags --progress https://github.com/Mandylz/ExamTest16-MandanaLotfiZadeh1 +refs/heads/*:refs/remotes/origin/*
+ > C:\Program Files\Git\bin\git rev-parse "refs/remotes/origin/master^{commit}" # timeout=10
+ > C:\Program Files\Git\bin\git rev-parse "refs/remotes/origin/origin/master^{commit}" # timeout=10
+Checking out Revision f16e4ab26774922a49fe32c3d0157e652fdccbaa (refs/remotes/origin/master)
+ > C:\Program Files\Git\bin\git config core.sparsecheckout # timeout=10
+ > C:\Program Files\Git\bin\git checkout -f f16e4ab26774922a49fe32c3d0157e652fdccbaa
+ > C:\Program Files\Git\bin\git rev-list 0630173b958de31ae482d396e82cfd89fd455053 # timeout=10
+Parsing POMs
+Established TCP socket on 49524
+[UKLocation] $ "C:\Program Files\Java\jdk1.8.0_121/bin/java" -cp "C:\jenkins\plugins\maven-plugin\WEB-INF\lib\maven33-agent-1.8.1.jar;C:\Program Files\apache-maven-3.3.9-bin\boot\plexus-classworlds-2.5.2.jar;C:\Program Files\apache-maven-3.3.9-bin/conf/logging" jenkins.maven3.agent.Maven33Main "C:\Program Files\apache-maven-3.3.9-bin" C:\jenkins\war\WEB-INF\lib\remoting-3.7.jar C:\jenkins\plugins\maven-plugin\WEB-INF\lib\maven33-interceptor-1.8.1.jar C:\jenkins\plugins\maven-plugin\WEB-INF\lib\maven3-interceptor-commons-1.8.1.jar 49524
+<===[JENKINS REMOTING CAPACITY]===>channel started
+Executing Maven:  -B -f C:\jenkins\workspace\UKLocation\pom.xml com.smartbear.soapui:soapui-maven-plugin:test -DprojectFile=SoapFinalProject-soapui-project.xml
+[INFO] Scanning for projects...
+[INFO]                                                                         
+[INFO] ------------------------------------------------------------------------
+[INFO] Building soapUI project 0.0.1
+[INFO] ------------------------------------------------------------------------
+[INFO] 
+[INFO] --- soapui-maven-plugin:5.0.0:test (default-cli) @ soapui-project ---
+SoapUI 5.0.0 Maven2 TestCase Runner
+15:31:03,087 WARN  [SoapUI] Missing folder [C:\jenkins\workspace\UKLocation\ext] for external libraries
+15:31:03,088 INFO  [DefaultSoapUICore] Creating new settings at [C:\WINDOWS\system32\config\systemprofile\soapui-settings.xml]
+15:31:04,334 INFO  [WsdlProject] Loaded project from [file:/C:/jenkins/workspace/UKLocation/SoapFinalProject-soapui-project.xml]
+15:31:04,895 INFO  [SoapUITestCaseRunner] Running SoapUI tests in project [SoapFinalProject]
+15:31:04,897 INFO  [SoapUITestCaseRunner] Running Project [SoapFinalProject], runType = SEQUENTIAL
+15:31:04,910 INFO  [SoapUITestCaseRunner] Running SoapUI testcase [UKLocation-TestCase]
+15:31:04,918 INFO  [SoapUITestCaseRunner] running step [GetUKLocationByCounty]
+15:31:05,100 DEBUG [HttpClientSupport$SoapUIHttpClient] Attempt 1 to execute request
+15:31:05,100 DEBUG [SoapUIMultiThreadedHttpConnectionManager$SoapUIDefaultClientConnection] Sending request: POST /uklocation.asmx HTTP/1.1
+15:31:05,465 DEBUG [SoapUIMultiThreadedHttpConnectionManager$SoapUIDefaultClientConnection] Receiving response: HTTP/1.1 200 OK
+15:31:05,468 DEBUG [HttpClientSupport$SoapUIHttpClient] Connection can be kept alive indefinitely
+15:31:05,934 INFO  [SoapUITestCaseRunner] Assertion [SOAP Response] has status VALID
+15:31:05,934 INFO  [SoapUITestCaseRunner] Assertion [Contains] has status VALID
+15:31:05,934 INFO  [SoapUITestCaseRunner] Assertion [Valid HTTP Status Codes] has status VALID
+15:31:05,934 INFO  [SoapUITestCaseRunner] running step [PostCode]
+15:31:05,938 INFO  [SoapUITestCaseRunner] running step [GetUKLocationByPostCode]
+15:31:05,941 DEBUG [HttpClientSupport$SoapUIHttpClient] Stale connection check
+15:31:05,942 DEBUG [HttpClientSupport$SoapUIHttpClient] Attempt 1 to execute request
+15:31:05,942 DEBUG [SoapUIMultiThreadedHttpConnectionManager$SoapUIDefaultClientConnection] Sending request: POST /uklocation.asmx HTTP/1.1
+15:31:06,613 DEBUG [SoapUIMultiThreadedHttpConnectionManager$SoapUIDefaultClientConnection] Receiving response: HTTP/1.1 200 OK
+15:31:06,614 DEBUG [HttpClientSupport$SoapUIHttpClient] Connection can be kept alive indefinitely
+15:31:06,685 INFO  [SoapUITestCaseRunner] Assertion [SOAP Response] has status VALID
+15:31:06,686 INFO  [SoapUITestCaseRunner] Assertion [Contains] has status VALID
+15:31:06,686 INFO  [SoapUITestCaseRunner] Assertion [Valid HTTP Status Codes] has status VALID
+15:31:06,687 INFO  [SoapUITestCaseRunner] running step [GetUKLocationByTown_ProjectLevel]
+15:31:07,283 INFO  [log] <NewDataSet>
+  <Table>
+    <Town>Clifton</Town>
+    <County>Oxfordshire</County>
+    <PostCode>OX15</PostCode>
+  </Table>
+  <Table>
+    <Town>Deddington</Town>
+    <County>Oxfordshire</County>
+    <PostCode>OX15</PostCode>
+  </Table>
+  <Table>
+    <Town>Drayton</Town>
+    <County>Oxfordshire</County>
+    <PostCode>OX15</PostCode>
+  </Table>
+  <Table>
+    <Town>Epwell</Town>
+    <County>Oxfordshire</County>
+    <PostCode>OX15</PostCode>
+  </Table>
+  <Table>
+    <Town>Wigginton</Town>
+    <County>Oxfordshire</County>
+    <PostCode>OX15</PostCode>
+  </Table>
+  <Table>
+    <Town>Winderton</Town>
+    <County>Warwickshire</County>
+    <PostCode>OX15</PostCode>
+  </Table>
+  <Table>
+    <Town>Wroxton</Town>
+    <County>Oxfordshire</County>
+    <PostCode>OX15</PostCode>
+  </Table>
+  <Table>
+    <Town>Alkerton</Town>
+    <County>Oxfordshire</County>
+    <PostCode>OX15</PostCode>
+  </Table>
+  <Table>
+    <Town>Hempton</Town>
+    <County>Oxfordshire</County>
+    <PostCode>OX15</PostCode>
+  </Table>
+  <Table>
+    <Town>Hook Norton</Town>
+    <County>Oxfordshire</County>
+    <PostCode>OX15</PostCode>
+  </Table>
+  <Table>
+    <Town>Horley</Town>
+    <County>Oxfordshire</County>
+    <PostCode>OX15</PostCode>
+  </Table>
+  <Table>
+    <Town>Hornton</Town>
+    <County>Oxfordshire</County>
+    <PostCode>OX15</PostCode>
+  </Table>
+  <Table>
+    <Town>Lower Brailes</Town>
+    <County>Warwickshire</County>
+    <PostCode>OX15</PostCode>
+  </Table>
+  <Table>
+    <Town>Milcombe</Town>
+    <County>Oxfordshire</County>
+    <PostCode>OX15</PostCode>
+  </Table>
+  <Table>
+    <Town>Milton</Town>
+    <County>Oxfordshire</County>
+    <PostCode>OX15</PostCode>
+  </Table>
+  <Table>
+    <Town>Balscote</Town>
+    <County>Oxfordshire</County>
+    <PostCode>OX15</PostCode>
+  </Table>
+  <Table>
+    <Town>Barford St John</Town>
+    <County>Oxfordshire</County>
+    <PostCode>OX15</PostCode>
+  </Table>
+  <Table>
+    <Town>Barford St Michael</Town>
+    <County>Oxfordshire</County>
+    <PostCode>OX15</PostCode>
+  </Table>
+  <Table>
+    <Town>Bloxham</Town>
+    <County>Oxfordshire</County>
+    <PostCode>OX15</PostCode>
+  </Table>
+  <Table>
+    <Town>Bodicote</Town>
+    <County>Oxfordshire</County>
+    <PostCode>OX15</PostCode>
+  </Table>
+  <Table>
+    <Town>Broughton</Town>
+    <County>Oxfordshire</County>
+    <PostCode>OX15</PostCode>
+  </Table>
+  <Table>
+    <Town>Shutford</Town>
+    <County>Oxfordshire</County>
+    <PostCode>OX15</PostCode>
+  </Table>
+  <Table>
+    <Town>Sibford Ferris</Town>
+    <County>Oxfordshire</County>
+    <PostCode>OX15</PostCode>
+  </Table>
+  <Table>
+    <Town>Sibford Gower</Town>
+    <County>Oxfordshire</County>
+    <PostCode>OX15</PostCode>
+  </Table>
+  <Table>
+    <Town>South Newington</Town>
+    <County>Oxfordshire</County>
+    <PostCode>OX15</PostCode>
+  </Table>
+  <Table>
+    <Town>Swalcliffe</Town>
+    <County>Oxfordshire</County>
+    <PostCode>OX15</PostCode>
+  </Table>
+  <Table>
+    <Town>Tadmarton</Town>
+    <County>Oxfordshire</County>
+    <PostCode>OX15</PostCode>
+  </Table>
+  <Table>
+    <Town>North Newington</Town>
+    <County>Oxfordshire</County>
+    <PostCode>OX15</PostCode>
+  </Table>
+  <Table>
+    <Town>Ratley</Town>
+    <County>Warwickshire</County>
+    <PostCode>OX15</PostCode>
+  </Table>
+  <Table>
+    <Town>Shenington</Town>
+    <County>Oxfordshire</County>
+    <PostCode>OX15</PostCode>
+  </Table>
+  <Table>
+    <Town>Upper Brailes</Town>
+    <County>Warwickshire</County>
+    <PostCode>OX15</PostCode>
+  </Table>
+</NewDataSet>
+15:31:07,343 INFO  [log] List of All UK towns : CliftonDeddingtonDraytonEpwellWiggintonWindertonWroxtonAlkertonHemptonHook NortonHorleyHorntonLower BrailesMilcombeMiltonBalscoteBarford St JohnBarford St MichaelBloxhamBodicoteBroughtonShutfordSibford FerrisSibford GowerSouth NewingtonSwalcliffeTadmartonNorth NewingtonRatleySheningtonUpper Brailes
+15:31:07,343 INFO  [log] This town is selected : Clifton
+15:31:07,367 INFO  [SoapUITestCaseRunner] running step [GetUKLocationByTown]
+15:31:07,368 DEBUG [HttpClientSupport$SoapUIHttpClient] Stale connection check
+15:31:07,369 DEBUG [HttpClientSupport$SoapUIHttpClient] Attempt 1 to execute request
+15:31:07,369 DEBUG [SoapUIMultiThreadedHttpConnectionManager$SoapUIDefaultClientConnection] Sending request: POST /uklocation.asmx HTTP/1.1
+15:31:07,917 DEBUG [SoapUIMultiThreadedHttpConnectionManager$SoapUIDefaultClientConnection] Receiving response: HTTP/1.1 200 OK
+15:31:07,917 DEBUG [HttpClientSupport$SoapUIHttpClient] Connection can be kept alive indefinitely
+15:31:07,981 INFO  [SoapUITestCaseRunner] Assertion [SOAP Response] has status VALID
+15:31:07,982 INFO  [SoapUITestCaseRunner] Assertion [Contains] has status VALID
+15:31:07,982 INFO  [SoapUITestCaseRunner] Assertion [Valid HTTP Status Codes] has status VALID
+15:31:07,983 INFO  [SoapUITestCaseRunner] running step [ValidateUKAddress_GlobalLevel]
+15:31:08,113 INFO  [log] Clifton
+15:31:08,113 INFO  [log] Bedfordshire
+15:31:08,113 INFO  [log] SG17
+15:31:08,127 INFO  [SoapUITestCaseRunner] running step [ValidateUKAddress]
+15:31:08,129 DEBUG [HttpClientSupport$SoapUIHttpClient] Stale connection check
+15:31:08,131 DEBUG [HttpClientSupport$SoapUIHttpClient] Attempt 1 to execute request
+15:31:08,131 DEBUG [SoapUIMultiThreadedHttpConnectionManager$SoapUIDefaultClientConnection] Sending request: POST /uklocation.asmx HTTP/1.1
+15:31:08,682 DEBUG [SoapUIMultiThreadedHttpConnectionManager$SoapUIDefaultClientConnection] Receiving response: HTTP/1.1 200 OK
+15:31:08,682 DEBUG [HttpClientSupport$SoapUIHttpClient] Connection can be kept alive indefinitely
+15:31:08,691 INFO  [SoapUITestCaseRunner] Assertion [SOAP Response] has status VALID
+15:31:08,691 INFO  [SoapUITestCaseRunner] Assertion [Contains] has status VALID
+15:31:08,692 INFO  [SoapUITestCaseRunner] Assertion [Contains 1] has status VALID
+15:31:08,692 INFO  [SoapUITestCaseRunner] Assertion [Contains 2] has status VALID
+15:31:08,692 INFO  [SoapUITestCaseRunner] Assertion [Valid HTTP Status Codes] has status VALID
+15:31:08,693 INFO  [SoapUITestCaseRunner] Finished running SoapUI testcase [UKLocation-TestCase], time taken: 3752ms, status: FINISHED
+15:31:08,694 INFO  [SoapUITestCaseRunner] Project [SoapFinalProject] finished with status [FINISHED] in 3793ms
+[JENKINS] Recording test results
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time: 8.705 s
+[INFO] Finished at: 2017-05-17T15:31:09+02:00
+[INFO] Final Memory: 27M/268M
+[INFO] ------------------------------------------------------------------------
+[JENKINS] Archiving C:\jenkins\workspace\UKLocation\pom.xml to com.scania.cbm.test/soapui-project/0.0.1/soapui-project-0.0.1.pom
+channel stopped
+Warning: you have no plugins providing access control for builds, so falling back to legacy behavior of permitting any downstream builds to be triggered
+Triggering a new build of TimeSheetAppFinal
+Finished: SUCCESS
